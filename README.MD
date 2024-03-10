@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Sarah.jpeg" alt="Foto" width="20%"/>
+  <img src="./mgt/Sarah.jpeg" alt="Foto" width="20%"/>
 </p>
 
 # Portfólio digital de Sarah Montuani Batagioti
