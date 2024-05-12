@@ -163,6 +163,27 @@ li {
     margin: 0;
 }
 
+/* PRJETOS */
+
+.tipoProjeto {
+    padding: 50px;
+}
+
+.cardProjetos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.tags {
+    margin-bottom: 20px;
+}
+
 
 
 
