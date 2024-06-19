@@ -1,10 +1,27 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
+from fpdf import FPDF
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+def generate_pdf():
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.cell(200, 10, txt="Currículo de Sarah Batagioti", ln=True, align="C")
+    pdf.cell(200, 10, txt="Desenvolvedora Fullstack Júnior", ln=True, align="C")
+    pdf.output("static/pdf/csmb.pdf")
+
+@app.route('/download_curriculum')
+def download_curriculum():
+    # Gere o PDF antes de enviar
+    generate_pdf()
+    # Diretório onde o PDF está localizado
+    pdf_path = "static/pdf/csmb.pdf"
+    return send_file(pdf_path, as_attachment=True)
 
 @app.route('/sobreMim')
 def sobreMim():

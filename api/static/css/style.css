@@ -83,7 +83,6 @@
 }
 
 
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -291,6 +290,10 @@ body {
 
 .square {
     padding: 50px;
+}
+
+.square h2 {
+  color: #C0866C !important;
 }
 
 .logo {
