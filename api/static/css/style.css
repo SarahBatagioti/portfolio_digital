@@ -10,9 +10,35 @@
     background-color: #34353A;
 }
 
-/*FONTES*/
+/* HEADER */
 
+.navbar {
+  background-color: #34353A;
 
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center; 
+  gap: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container p {
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(255, 255, 255); 
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(104, 104, 104); 
+}
 
 body {
   margin: 0;
