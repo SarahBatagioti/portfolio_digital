@@ -40,6 +40,50 @@
   color: rgb(104, 104, 104); 
 }
 
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-close {
+  filter: invert(1);
+}
+
+/*FOOTER*/
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #333;
+  color: white;
+}
+
+.footer .footer-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer .footer-logo .text-container {
+  margin-left: 10px;
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer .footer-links .nav {
+  margin-bottom: 10px;
+}
+
+.footer .social-icons .bi {
+  font-size: 24px;
+  color: white;
+}
+
+
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -59,6 +103,8 @@ body {
   height: 100%;
   width: 50%;
   object-fit: cover;
+  transform: scale(1.0); 
+  filter: contrast(120%);
 }
 
 .hero-text {
@@ -186,7 +232,7 @@ body {
   background-color: #C0866C;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .hero {
       flex-direction: column;
   }
@@ -213,6 +259,32 @@ body {
       width: 80px;
       height: 80px;
   }
+
+  .hero img {
+    margin-top: 10%;
+    transform: scale(0.8);
+  }
+
+  .footer .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .footer-links {
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons {
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer .footer-logo {
+    justify-content: center;
+}
 }
 
 /* CURRÍCULO PROFISSIONAL - SOBRE MIM */
@@ -242,6 +314,24 @@ body {
     margin: 0;
 }
 
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero img {
+    max-width: 50%;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .hero-text {
+    max-width: none;
+  }
+}
 
 /* CURRÍCULO PROFISSIONAL - SOBRE MIM */
 
