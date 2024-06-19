@@ -7,39 +7,22 @@
 <div class="tipoProjeto">
     <h2>Projetos acadêmicos</h2>
     <div class="cardProjetos">
-        <!-- SMART FARM -->
+        {% for projeto in projetos %}
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../static/img/inicioSmartFarm.png" alt="">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/' ~ projeto.imagem) }}" alt="">
             <div class="card-body">
-                <h5 class="card-title">Smart Farm</h5>
-                <p class="card-text">Painel de visualização que permite o monitoramento constante de uma estufa através
-                    de
-                    gráficos e automatização do processo de coleta e armazenamento de dados</p>
+                <h5 class="card-title">{{ projeto.titulo }}</h5>
+                <p class="card-text">{{ projeto.descricao }}</p>
                 <div class="tags">
-                    <span class="badge bg-secondary">HTML</span>
-                    <span class="badge bg-secondary">CSS</span>
-                    <span class="badge bg-secondary">Python</span>
+                    {% for tecnologia in projeto.tecnologias %}
+                    <span class="badge bg-secondary">{{ tecnologia }}</span>
+                    {% endfor %}
                 </div>
-                <a href="https://github.com/andresalerno/projeto_api" class="btn btn-primary">Ver mais</a>
+                <a href="{{ projeto.link }}" class="btn btn-primary">Ver mais</a>
             </div>
         </div>
-
-        <!-- IZZIE -->
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../static/img/IZZIE.jpg">
-            <div class="card-body">
-                <h5 class="card-title">IZZIE - Bengala Inteligente</h5>
-                <p class="card-text">Ferramenta inovadora e eficaz que promove a mobilidade independente, segurança e
-                    autonomia de crianças portadoras de cegueira em diferentes ambientes internos, visando facilitar a
-                    exploração do espaço, garantir a detecção de obstáculos e oferecer auxilio auditivo.</p>
-                <div class="tags">
-                    <span class="badge bg-secondary">HTML</span>
-                    <span class="badge bg-secondary">CSS</span>
-                    <span class="badge bg-secondary">Arduino</span>
-                </div>
-                <a href="https://www.canva.com/design/DAFvGaB8krU/3PXvDf3c4hWy9fc9CZKM_A/edit?utm_content=DAFvGaB8krU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn btn-primary">Ver mais</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
+
 {% endblock %}
