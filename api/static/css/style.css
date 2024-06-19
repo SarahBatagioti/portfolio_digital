@@ -10,137 +10,183 @@
     background-color: #34353A;
 }
 
-/* ESTILOS DA FONTE */
+/*FONTES*/
 
-.bold-montserrat {
-    font-weight: bold;
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #25262C;
+  color: white;
 }
 
-.medium-montserrat {
-    font-weight: medium;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-.regular-montserrat {
-    font-weight: lighter;
+.hero img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
 }
 
-/* HEADER */
-
-.navbar {
-    position: relative;
-    z-index: 1; /* Define a barra de navegação acima da imagem */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.hero-text h1 {
+  font-size: 124px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.text-container {
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px; /* Espaço de 10px entre a foto e o texto */
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-.text-container p {
-    margin: 0;
-}
-
-.navbar-nav .nav-link {
-    color: rgb(255, 255, 255);
-}
-
-.navbar-nav .nav-link:hover {
-    color: rgb(104, 104, 104);
-}
-
-/* INDEX - HERO SECTION */
-
-.hero-section {
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.hero-section .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 50%;
-}
-
-.hero-section img {
-    height: 50%;
-    width: 80%;
-    max-width: 100%;
-    transform: scale(1.2);
-    filter: contrast(120%);
-}
-
-.name {
-    font-size: 124px;
-    margin-bottom: 0;
-}
-
-.role {
-    font-size: 32px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.hero-text h2 {
+  font-size: 32px;
+  margin: 10px 0;
 }
 
 .social-icons a {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    margin-right: 5px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
 }
 
 .social-icons a i {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .social-icons a:hover {
-    background-color: #C0866C !important;
-    border-color: #C0866C;
+  background-color: #C0866C !important;
+  border-color: #C0866C;
 }
 .social-icons a i:hover {
-    background-color: #C0866C;
+  background-color: #C0866C;
 }
 
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.section {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 100%;
-    }
+.section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #C0866C !important;
 }
 
-/* ABOUT SECTION */
-
-.about-section .btn-download {
-    border: 2px solid #C0866C;
-    border-radius: 30px;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.section h3 {
+  color: #C0866C !important;
 }
 
-.about-section .btn-download:hover {
-    background-color: #C0866C;
+.section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.column {
+  width: 45%;
+  text-align: left;
+}
+
+.skills-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #C0866C !important;
+}
+
+.skills-section h3 {
+  margin-top: 5%;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skill {
+  text-align: center;
+  margin: 10px;
+}
+
+.skill img {
+  width: 100px;
+  height: 100px;
+}
+
+.skill p {
+  font-size: 24px;
+  letter-spacing: 13.50px;
+}
+
+.download-button {
+  display: inline-block;
+  border: 2px solid #C0866C;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #c06c6c;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.download-button:hover{
+  background-color: #C0866C;
+}
+
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+  }
+
+  .hero img {
+      width: 100%;
+      height: auto;
+  }
+
+  .hero-text h1 {
+      font-size: 64px;
+  }
+
+  .hero-text h2 {
+      font-size: 24px;
+  }
+
+  .column {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .skill img {
+      width: 80px;
+      height: 80px;
+  }
 }
 
 /* CURRÍCULO PROFISSIONAL - SOBRE MIM */
