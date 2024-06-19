@@ -7,7 +7,26 @@
 <div class="tipoProjeto">
     <h2>Projetos acadêmicos</h2>
     <div class="cardProjetos">
-        {% for projeto in projetos %}
+        {% for projeto in projetos if projeto.categoria == 'academico' %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ url_for('static', filename='img/' ~ projeto.imagem) }}" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{ projeto.titulo }}</h5>
+                <p class="card-text">{{ projeto.descricao }}</p>
+                <div class="tags">
+                    {% for tecnologia in projeto.tecnologias %}
+                    <span class="badge bg-secondary">{{ tecnologia }}</span>
+                    {% endfor %}
+                </div>
+                <a href="{{ projeto.link }}" class="btn btn-primary">Ver mais</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h2>Projetos profissionais</h2>
+    <div class="cardProjetos">
+        {% for projeto in projetos if projeto.categoria == 'profissional' %}
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ url_for('static', filename='img/' ~ projeto.imagem) }}" alt="">
             <div class="card-body">
