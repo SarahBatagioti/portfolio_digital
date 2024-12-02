@@ -1,5 +1,4 @@
 from flask import Flask, render_template, send_file
-from fpdf import FPDF
 
 app = Flask(__name__)
 
@@ -7,21 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-def generate_pdf():
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
-    pdf.cell(200, 10, txt="Currículo de Sarah Batagioti", ln=True, align="C")
-    pdf.cell(200, 10, txt="Desenvolvedora Fullstack Júnior", ln=True, align="C")
-    pdf.output("static/pdf/csmb.pdf")
-
 @app.route('/download_curriculum')
-def download_curriculum():
-    # Gere o PDF antes de enviar
-    generate_pdf()
-    # Diretório onde o PDF está localizado
-    pdf_path = "static/pdf/csmb.pdf"
-    return send_file(pdf_path, as_attachment=True)
 
 @app.route('/sobreMim')
 def sobreMim():
@@ -52,6 +37,30 @@ def projetos():
             'tecnologias': ['HTML', 'CSS', 'MYSQL', 'DOCKER'],
             'imagem': 'mbviagens.png',
             'link': 'https://github.com/SarahBatagioti/Desafio3',
+            'categoria': 'academico'
+        },
+        {
+            'titulo': 'CloudStock',
+            'descricao': 'Sistema de controle de estoque desenvolvida para facilitar a gestão de produtos, fornecedores e movimentações de estoque',
+            'tecnologias': ['React', 'Typescript', 'MYSQL'],
+            'imagem': 'cloudstock.png',
+            'link': 'https://github.com/SkyFlyTeam/cloudStock',
+            'categoria': 'academico'
+        },
+        {
+            'titulo': 'Requisições ORM',
+            'descricao': 'Sistema usando requisições ORM, com disponibilidade de teste de rotas no back e front. Tem o objetivo de fazer um histórico de compras',
+            'tecnologias': ['JavaScript', 'Reatc', 'MYSQL'],
+            'imagem': 'rorm.png',
+            'link': 'https://github.com/SarahBatagioti/requisicoesORM',
+            'categoria': 'academico'
+        },
+        {
+            'titulo': 'IA detectora de fake news',
+            'descricao': 'Projeto desenvolvido na quinta edição do Technovation Summer School For Girls. O protótipo consiste em uma inteligência artificial treinada para detectar padrões comuns em informações falsas',
+            'tecnologias': ['Python', 'HTML', 'JavaScript'],
+            'imagem': 'iaex.png',
+            'link': 'https://github.com/SarahBatagioti/IA-detectora-de-fake-news',
             'categoria': 'academico'
         },
         {
