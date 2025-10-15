@@ -157,22 +157,27 @@ body {
 
 .section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section h2 {
   font-size: 32px;
   font-weight: bold;
   color: #C0866C !important;
+  margin-bottom: 20px;
 }
 
 .section h3 {
   color: #C0866C !important;
+  margin-bottom: 15px;
 }
 
 .section p {
   font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .columns {
@@ -180,6 +185,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 50px;
+  padding: 0 20px;
 }
 
 .column {
@@ -267,6 +273,14 @@ body {
   .social-icons {
       display: flex;
       justify-content: center;
+  }
+
+  .section {
+      padding: 50px 40px;
+  }
+
+  .columns {
+      padding: 0 10px;
   }
 
   .column {
