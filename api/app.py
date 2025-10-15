@@ -16,6 +16,30 @@ def sobreMim():
 def projetos():
     projetos_lista = [
         {
+            'titulo': 'Viva Sabores',
+            'descricao': 'Aplicativo de receitas culinárias que permite aos usuários explorar, salvar e compartilhar suas receitas favoritas, além de criar listas de compras personalizadas',
+            'tecnologias': ['React Native', 'PostgreSQL', 'JavaScript'],
+            'imagem': 'vivasabores.png',
+            'link': 'https://github.com/SarahBatagioti/app-receitas',
+            'categoria': 'academico'
+        },
+        {
+            'titulo': 'Vagalume -  Raspagem de dados',
+            'descricao': 'Raspagem de dados do Linkedin para coleta de dados profissionais e resumo usando LLM Ollama',
+            'tecnologias': ['Python', 'Ollama'],
+            'imagem': 'vagalume.png',
+            'link': 'https://github.com/SarahBatagioti/bertoti-vagalume',
+            'categoria': 'academico'
+        },
+        {
+            'titulo': 'CloudStock',
+            'descricao': 'Sistema de controle de estoque desenvolvida para facilitar a gestão de produtos, fornecedores e movimentações de estoque',
+            'tecnologias': ['React', 'Typescript', 'MYSQL'],
+            'imagem': 'cloudstock.png',
+            'link': 'https://github.com/SkyFlyTeam/cloudStock',
+            'categoria': 'academico'
+        },
+        {
             'titulo': 'Smart Farm',
             'descricao': 'Painel de visualização que permite o monitoramento constante de uma estufa através de gráficos e automatização do processo de coleta e armazenamento de dados',
             'tecnologias': ['HTML', 'CSS', 'PYTHON'],
@@ -28,7 +52,7 @@ def projetos():
             'descricao': 'Ferramenta inovadora e eficaz que promove a mobilidade independente, segurança e autonomia de crianças portadoras de cegueira em diferentes ambientes internos, visando facilitar a exploração do espaço, garantir a detecção de obstáculos e oferecer auxilio auditivo.',
             'tecnologias': ['TYPESCRIPT', 'CHACKRA UI', 'ARDUINO'],
             'imagem': 'IZZIE.jpg',
-            'link': 'https://www.canva.com/design/DAFvGaB8krU/3PXvDf3c4hWy9fc9CZKM_A/edit?utm_content=DAFvGaB8krU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+            'link': 'https://github.com/SarahBatagioti/TCC-IZZIE-ARDUINO',
             'categoria': 'academico'
         },
         {
@@ -37,14 +61,6 @@ def projetos():
             'tecnologias': ['HTML', 'CSS', 'MYSQL', 'DOCKER'],
             'imagem': 'mbviagens.png',
             'link': 'https://github.com/SarahBatagioti/Desafio3',
-            'categoria': 'academico'
-        },
-        {
-            'titulo': 'CloudStock',
-            'descricao': 'Sistema de controle de estoque desenvolvida para facilitar a gestão de produtos, fornecedores e movimentações de estoque',
-            'tecnologias': ['React', 'Typescript', 'MYSQL'],
-            'imagem': 'cloudstock.png',
-            'link': 'https://github.com/SkyFlyTeam/cloudStock',
             'categoria': 'academico'
         },
         {
@@ -74,7 +90,7 @@ def projetos():
         {
             'titulo': 'Jogo dos 7 erros com OpenCV',
             'descricao': 'Com o objetivo de no final fazer um programa para identificar erros em peças de uma indústria, durante meus estudos consegui desenvolver um jogo de sete erros, que faz a subtração de duas imagens',
-            'tecnologias': ['PYHTON'],
+            'tecnologias': ['PYHTON', 'OpenCV'],
             'imagem': 'jogo.png',
             'link': 'https://github.com/SarahBatagioti/Implementar-jogo-7-erros-em-Python.git',
             'categoria': 'profissional'

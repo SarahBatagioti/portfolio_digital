@@ -50,11 +50,15 @@
 
 /*FOOTER*/
 .footer {
-  padding: 20px 0;
+  padding: 30px 20px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   background-color: #333;
   color: white;
+}
+
+.footer * {
+  background-color: #333;
 }
 
 .footer .footer-logo {
@@ -94,16 +98,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 80vh;
   padding: 20px;
+  padding-top: 80px;
+  gap: 30px;
 }
 
 .hero img {
-  height: 100%;
-  width: 50%;
+  height: 400px;
+  width: 400px;
   object-fit: cover;
   transform: scale(1.0); 
   filter: contrast(120%);
+  border-radius: 50%;
 }
 
 .hero-text {
@@ -111,16 +118,17 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  max-width: 500px;
 }
 
 .hero-text h1 {
-  font-size: 124px;
+  font-size: 72px;
   font-weight: bold;
   margin: 0;
 }
 
 .hero-text h2 {
-  font-size: 32px;
+  font-size: 24px;
   margin: 10px 0;
 }
 
@@ -237,16 +245,28 @@ body {
   }
 
   .hero img {
-      width: 100%;
-      height: auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+  }
+
+  .hero-text {
+      text-align: center;
   }
 
   .hero-text h1 {
-      font-size: 64px;
+      font-size: 48px;
+      text-align: center;
   }
 
   .hero-text h2 {
-      font-size: 24px;
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .social-icons {
+      display: flex;
+      justify-content: center;
   }
 
   .column {
@@ -289,7 +309,7 @@ body {
 /* CURRÍCULO PROFISSIONAL - SOBRE MIM */
 
 .square {
-    padding: 50px;
+    padding: 30px 50px;
 }
 
 .square h2 {
@@ -326,20 +346,22 @@ body {
   }
 
   .hero img {
-    max-width: 50%;
+    max-width: 400px;
+    max-height: 400px;
     margin-bottom: 0;
     margin-right: 20px;
+    border-radius: 50%;
   }
 
   .hero-text {
-    max-width: none;
+    max-width: 500px;
   }
 }
 
 /* CURRÍCULO PROFISSIONAL - SOBRE MIM */
 
 .square {
-    padding: 50px;
+    padding: 30px 50px;
 }
 
 .logo {
